@@ -18,6 +18,8 @@ jobs:
       with:
         java-version: 15
     - name: Docker Login
+      env:
+        DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
       run: echo $DOCKERHUB_PASSWORD | docker login --username geoffreydv --password-stdin
     - name: Build and push to dockerhub
       run: mvn -B compile jib:build --file pom.xml
