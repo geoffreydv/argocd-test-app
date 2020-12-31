@@ -52,6 +52,9 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>2.7.0</version>
                 <configuration>
+                    <from>
+                        <image>openjdk:15-jdk-alpine</image>
+                    </from>
                     <to>
                         <image>registry.hub.docker.com/geoffreydv/argocd-test-app:${project.version}</image>
                     </to>
